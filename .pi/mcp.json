@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "infraverse": {
+      "command": "node",
+      "args": ["--disable-warning=ExperimentalWarning", "server/mcp-stdio.js"],
+      "exposure": "codemode",
+      "timeout": 30,
+      "description": "InfraVerse 机房数字孪生与物料管理：搜索/查看/新增/修改/删除物料与机柜、查看和上报服务器状态、下发与确认指令、读取操作记录。"
+    }
+  }
+}

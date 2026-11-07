@@ -1,0 +1,16 @@
+services:
+  infraverse:
+    build: .
+    image: infraverse:latest
+    container_name: infraverse
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    environment:
+      # 演示模式：指令会在几秒后自动模拟完成；接入真实 Agent 后设为 false
+      SIMULATE_COMMANDS: "true"
+      ALLOW_REGISTER: "true"
+      # 建议生产环境固定 JWT 密钥；不设置时自动生成并保存到 data/secret.key
+      # JWT_SECRET: "please-change-me"
+    volumes:
+      - ./data:/app/data
